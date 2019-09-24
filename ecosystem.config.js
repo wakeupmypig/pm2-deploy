@@ -18,11 +18,11 @@ module.exports = {
   // pm2 可以帮我们实现自动发布, 可以和 git 一同使用
   deploy : {
     production : {
-      user : 'node',
-      host : '212.83.163.1',
+      user : 'root',
+      host : '39.106.14.146',
       ref  : 'origin/master',
-      repo : 'git@github.com:repo.git',
-      path : '/var/www/production',
+      repo : 'https://github.com/wakeupmypig/pm2-deploy.git',
+      path : '/home',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
     }
   }
